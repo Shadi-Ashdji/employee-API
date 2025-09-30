@@ -2,7 +2,7 @@ Simple Employee Database REST API
 By Shadi Ashdji
 
 Functions:
-Get, delete, and add employees into an h2 Springboot database on local memory through HTTP requests.
+Get, delete, and add employees into an h2 Springboot database controlled through HTTP requests.
 
 Description: 
 Uses Springboot to setup and facilitate the data transmission of the Employee database. Uses controller and JPA repository for function implementation.
