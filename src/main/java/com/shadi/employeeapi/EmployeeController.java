@@ -37,6 +37,20 @@ public class EmployeeController {
     return "Employee with id "+id+" removed";
     }
 
+    @PutMapping("/{id}")
+    public Employee updateEmployee(@PathVariable Integer id, @RequestBody Employee updatedEmployee) {
+    Employee employee = employeeRepo.findById(id)
+        .orElseThrow(() -> new RuntimeException("Employee not found"));
+
+    employee.setFName(updatedEmployee.getFName());
+    employee.setLName(updatedEmployee.getLName());
+    employee.setEmail(updatedEmployee.getEmail());
+    employee.setDepartment(updatedEmployee.getDepartment());
+    employee.setIsRemote(updatedEmployee.getIsRemote());
+
+    return employeeRepo.save(employee);
+}
+
 
 }
     
