@@ -15,6 +15,7 @@ API Endpoints:
 GET -> /employees -- Retrieves all employees
 DELETE -> /employees/{id} -- Deletes employee with matching ID
 POST -> /employees with Json text -- Adds employee
+PUT -> /employee{id} -- Update existing employee
 
 Example of Json text to add employee:
 /employees 
