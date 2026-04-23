@@ -1,19 +1,32 @@
 package com.shadi.employeeapi;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 
 @Entity 
 public class Employee {
 
-    @Id
-    private Integer empID; // Primary Key
-    
-    private String fName;
-    private String lName;
-    private String email;
-    private String department;
-    private Boolean isRemote;
+	   @Id
+	    private Integer empID;
+
+	    @NotBlank(message = "First name is required")
+	    private String fName;
+
+	    @NotBlank(message = "Last name is required")
+	    private String lName;
+
+	    @Email(message = "Invalid email format")
+	    @NotBlank(message = "Email is required")
+	    private String email;
+
+	    @NotBlank(message = "Department is required")
+	    private String department;
+
+	    @NotNull(message = "Remote status must be provided")
+	    private Boolean isRemote;
 
     public Employee() {
     }
