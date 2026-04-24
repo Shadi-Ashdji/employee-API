@@ -13,10 +13,10 @@ public class Employee {
 	    private Integer empID;
 
 	    @NotBlank(message = "First name is required")
-	    private String fName;
+	    private String firstName;
 
 	    @NotBlank(message = "Last name is required")
-	    private String lName;
+	    private String lastName;
 
 	    @Email(message = "Invalid email format")
 	    @NotBlank(message = "Email is required")
@@ -31,10 +31,10 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Integer empID, String fName, String lName, String email, String department, Boolean isRemote) {
+    public Employee(Integer empID, String firstName, String lastName, String email, String department, Boolean isRemote) {
         this.empID = empID;
-        this.fName = fName;
-        this.lName = lName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.department = department;
         this.isRemote = isRemote;
@@ -48,20 +48,20 @@ public class Employee {
         this.empID = empID;
     }
 
-    public String getFName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String fName) {
+        this.firstName = fName;
     }
 
-    public String getLName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lName) {
+        this.lastName = lName;
     }
 
     public String getEmail() {

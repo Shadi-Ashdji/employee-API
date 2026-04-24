@@ -43,8 +43,8 @@ public class EmployeeController {
     Employee employee = employeeRepo.findById(id)
         .orElseThrow(() -> new RuntimeException("Employee not found"));
 
-    employee.setFName(updatedEmployee.getFName());
-    employee.setLName(updatedEmployee.getLName());
+    employee.setFName(updatedEmployee.getFirstName());
+    employee.setLName(updatedEmployee.getLastName());
     employee.setEmail(updatedEmployee.getEmail());
     employee.setDepartment(updatedEmployee.getDepartment());
     employee.setIsRemote(updatedEmployee.getIsRemote());
