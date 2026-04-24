@@ -17,6 +17,8 @@ DELETE -> /employees/{id} -- Deletes employee with matching ID
 POST -> /employees with Json text -- Adds employee
 PUT -> /employee{id} -- Update existing employee
 
+4/24/6 Added validation, tested endpoints using Postman to verify request handling and validation behavior.
+
 Example of Json text to add employee:
 /employees 
 {
