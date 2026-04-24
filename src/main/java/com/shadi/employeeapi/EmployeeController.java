@@ -1,5 +1,5 @@
 package com.shadi.employeeapi;
-
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public Employee addEmployee(@RequestBody Employee employee) {
+    public Employee addEmployee(@Valid @RequestBody Employee employee) {
         return employeeRepo.save(employee); 
 
 
@@ -39,7 +39,7 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public Employee updateEmployee(@PathVariable Integer id, @RequestBody Employee updatedEmployee) {
+    public Employee updateEmployee(@PathVariable Integer id, @Valid @RequestBody Employee updatedEmployee) {
     Employee employee = employeeRepo.findById(id)
         .orElseThrow(() -> new RuntimeException("Employee not found"));
 
